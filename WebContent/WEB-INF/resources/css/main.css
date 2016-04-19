@@ -20,6 +20,12 @@ textarea {
 	vertical-align: top;
 }
 
+.error {
+	font-size: small;
+	color: red;
+	margin-left: 10px;
+}
+
 .control {
 	margin-left: 10px;
 }
