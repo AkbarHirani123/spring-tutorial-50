@@ -2,6 +2,8 @@ package com.caveofprogramming.spring.web.dao;
 
 import javax.validation.constraints.*;
 
+import com.caveofprogramming.spring.web.validation.ValidEmail;
+
 public class Offer {
 
 	private int id;
@@ -10,7 +12,8 @@ public class Offer {
 	private String name;
 	
 	@NotNull
-	@Pattern(regexp=".*\\@.*\\..*", message="This does not appear to be a valid email address.")
+	//@Pattern(regexp=".*\\@.*\\..*", message="This does not appear to be a valid email address.")
+	@ValidEmail(min=6, message="This does not appear to be a valid email address.")
 	private String email;
 	
 	@Size(min=20, max=250, message="Text length must be between 20 and 250 characters.")
