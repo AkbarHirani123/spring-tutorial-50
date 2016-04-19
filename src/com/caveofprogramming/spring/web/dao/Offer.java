@@ -1,14 +1,19 @@
 package com.caveofprogramming.spring.web.dao;
 
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 public class Offer {
 
 	private int id;
 	
-	@Size(min=4, max=100)
+	@Size(min=4, max=100, message="Name length must be between 4 and 100 characters.")
 	private String name;
+	
+	@NotNull
+	@Pattern(regexp=".*\\@.*\\..*", message="This does not appear to be a valid email address.")
 	private String email;
+	
+	@Size(min=20, max=250, message="Text length must be between 20 and 250 characters.")
 	private String text;
 
 	public Offer() {
