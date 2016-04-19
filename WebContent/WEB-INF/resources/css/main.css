@@ -29,3 +29,8 @@ textarea {
 .control {
 	margin-left: 10px;
 }
+
+table.offers {
+	padding: 10px;
+	border: 1px solid black;
+}
