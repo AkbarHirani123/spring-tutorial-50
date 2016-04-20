@@ -14,9 +14,9 @@
 <body>
 	<table class="offers">
 		<tr>
-			<td><h4>Name:</h4></td>
-			<td><h4>Email:</h4></td>
-			<td><h4>Offer:</h4></td>
+			<td><b>Name:</b></td>
+			<td><b>Email:</b></td>
+			<td><b>Offer:</b></td>
 		</tr>
 		<c:forEach var="offer" items="${offers}">
 			<tr>
